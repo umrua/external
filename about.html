@@ -3,17 +3,50 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Page</title>
+    <title>Write-Up</title>
     <link rel="stylesheet" href="screen.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600&family=Source+Serif+4:wght@400;600&display=swap" rel="stylesheet">
+    <script>
+      tailwind = {
+        config: {
+          theme: {
+            extend: {
+              fontFamily: {
+                display: ["Space Grotesk", "sans-serif"],
+                serif: ["Source Serif 4", "serif"]
+              }
+            }
+          }
+        }
+      };
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
   </head>
-  <body>
-    <h1>About Page</h1>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html" class="active">About</a></li>
-      </ul>
-    </nav>
+  <body class="min-h-screen bg-gradient-to-br from-amber-50 via-orange-50 to-stone-100 text-stone-900">
+    <div class="mx-auto max-w-5xl px-6 py-10">
+      <header class="flex flex-wrap items-center justify-between gap-6">
+        <div>
+          <p class="text-xs uppercase tracking-[0.25em] text-stone-500">JSONPlaceholder</p>
+          <h1 class="font-display text-3xl font-semibold text-stone-900 sm:text-4xl">Write-Up</h1>
+          <p class="mt-2 max-w-xl font-serif text-base text-stone-600">
+            Comparison between GPT5.2-Codex & GPT4o.
+          </p>
+        </div>
+        <nav class="flex items-center gap-3 rounded-full bg-white/70 px-4 py-2 shadow-sm ring-1 ring-stone-200">
+          <a href="index.html" class="rounded-full px-4 py-2 text-sm font-medium text-stone-700 transition hover:bg-stone-100">Home</a>
+          <a href="about.html" class="active rounded-full bg-stone-900 px-4 py-2 text-sm font-medium text-stone-50">Write-Up</a>
+        </nav>
+      </header>
+      <main class="mt-10">
+        <section class="rounded-3xl border border-stone-200 bg-white/90 p-6 shadow-lg">
+          <p class="font-serif text-lg leading-relaxed text-stone-700">
+            Comparison (to do)
+          </p>
+        </section>
+      </main>
+    </div>
     <script src="index.js"></script>
   </body>
 </html>
